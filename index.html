@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Portfólio pessoal</title>	
+
+		<meta charset="UTF-8" />
+		<meta content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<link rel="shortcut icon" href="imagens/favicon.ico">	
+		<link rel="stylesheet" rel="preload" as="style" type="text/css" href="./styles.css">			
+	</head>
+	<body>	
+
+        <!-- Topo do site -->
+		<div id="Topo" class="Inline100 Centro ImagemMenu">
+			<div class="Centralizar">
+				<div class="AlinhaCentro">
+					<a class="LogoTopo" href="">
+						<img src="imagens/40074744.jpg" alt="Logo Novast" style="border-radius: 50% !important;">
+					</a>
+					<div class="Menu">	
+						<!-- Menu Baixo -->
+						<div class="MenuBaixo">
+							<a><div class="Item" onclick="mostrarConteudo('Empresa')">Sobre mim</div></a>
+							<a><div class="Item" onclick="mostrarConteudo('Formacao')">Formação</div></a>
+							<a><div class="Item" onclick="mostrarConteudo('Portfolio')">Portfólio</div></a>
+							<a><div class="Item" onclick="mostrarConteudo('Contato')">Contato</div></a>							
+						</div>				
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <!-- Topo do site mobile-->
+
+		<div id="TopoMobile" class="Inline100 Centro">
+			<div class="Centralizar">			
+				<div class="MenuBaixo">
+
+					<div style="float: left; padding: 10px;">
+						<img src="imagens/40074744.jpg" alt="" style="width: 88.71px; height: 37.43px;">
+					</div>	
+
+					<div class="Carrinho" >
+						<img src="imagens/menu-mobile.svg" alt="menu sanduiche" onclick="AbreFechaMenu('')">									
+					</div>			
+				</div>
+			</div>
+		</div>
+
+		<div class="ParteEscura" onclick="FechaMenusMobile()"></div>
+
+        <!-- Menu Mobile do site-->
+		<div class="Menu_flutuante" id="Menu_flutuante">
+			<div class="ParteMenu" id="parte1">
+				<div class="DivMenu">
+
+					<div class="AlinhaFechar Esquerda Linha100">
+						<div class="BotaoFechar" onclick="FechaMenusMobile()"></div>
+					</div>
+					
+					<div class="Linha100">
+						<div class="ItemMobile" onclick="mostrarConteudo('Empresa')">Sobre mim</div>
+						<div class="ItemMobile" onclick="mostrarConteudo('Formacao')">Formação</div>
+						<div class="ItemMobile" onclick="mostrarConteudo('Portfolio')">Portfólio</div>				
+						<div class="ItemMobile" onclick="mostrarConteudo('Contato')">Contato</div>						
+					</div>									
+				</div>							
+			</div>					
+		</div>
+
+        <!-- Div principal-->
+
+        <div id="Home" class="PaginaInterna Inline100 Centro">
+            <!-- Conteudo sobre mim-->
+            <div class="Empresa Inline100 Centro" id="Empresa">
+                <div class="Centralizar">
+                    <div class="AlinhaEmpresa Linha100">
+
+                        <div class="AlinhaTexto">
+                            <div class="TituloEmpresa">
+                                Sobre mim
+                            </div>
+
+                            <div class="DescricaoEmpresa">                                
+                                <p>Sou um desenvolvedor experiente e apaixonado, especializado em back-end e front-end, com conhecimentos sólidos em gerenciamento de dados e desenvolvimento de aplicativos móveis. Ao longo da minha carreira, concentrei-me em construir e otimizar sistemas robustos utilizando PHP e ASP Clássico no lado do back-end. No front-end, sou proficiente em HTML, CSS, JavaScript e jQuery, criando interfaces intuitivas e responsivas para os usuários. Possuo um sólido conhecimento em bancos de dados, com experiência em MySQL e SQL Server, garantindo a eficiência e segurança no armazenamento e recuperação de dados. Recentemente, expandi minhas habilidades para o desenvolvimento de aplicativos móveis, utilizando React Native para criar soluções móveis eficazes e de alto desempenho.</p>                                
+                            </div>
+                        </div>
+
+                        <div class="AlinhaLogo">
+                            <img src="imagens/1676850232487.jpg" style="width: 360px; height: auto; border-radius: 50%;">
+                        </div>			
+                    </div>			
+                </div>
+            </div>
+
+            <!-- Conteudo formação-->
+            <div class="Empresa Inline100 Centro" id="Formacao" style="display: none;">
+                <div class="Centralizar">
+                    <div class="AlinhaEmpresa Linha100">
+
+                        <div class="AlinhaTexto">
+                            <div class="TituloEmpresa">
+                                Formação
+                            </div>
+
+                            <div class="DescricaoEmpresa">                                
+                                <p>Técnico de Informatica - ETEC Dep.Ary de Camargo Pedroso</p>
+                                <ul>
+                                  <li>Adquiriu conhecimentos fundamentais em algoritmos, estruturas de dados e programação orientada a objetos.</li>
+                                  <li>Participou de projetos práticos que proporcionaram experiência prática em desenvolvimento de software.</li>
+                                  <li>Maratona de programação, robocode e minicursos ligados a programação de Arduíno e criação de projetos.</li>
+                                </ul>
+
+                                <h2>Cursos e Certificações</h2>
+                                <ul>
+                                  <li>Curso Avançado de PHP - Udemy</li>
+                                  <li>Curso de Desenvolvimento de Aplicativos Móveis com React Native - Udemy</li>
+                                  <li>Certificação em Gerenciamento de Banco de Dados MySQL- Udemy</li>
+                                </ul>
+                              
+                                <h2>Habilidades Técnicas</h2>
+                                <ul>
+                                  <li>Back-end: PHP, ASP Clássico</li>
+                                  <li>Front-end: HTML, CSS, JavaScript, jQuery</li>
+                                  <li>Banco de Dados: MySQL, SQL Server</li>
+                                  <li>Desenvolvimento de Aplicativos Móveis: React Native</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="AlinhaLogo">
+                            <img src="imagens/1676850232487.jpg" style="width: 360px; height: auto; border-radius: 50%;">
+                        </div>			
+                    </div>			
+                </div>
+            </div>
+
+            <!-- Conteudo Portfólio-->
+            <div class="Empresa Inline100 Centro" id="Portfolio" style="display: none;">
+                <div class="Centralizar">
+                    <div class="AlinhaEmpresa Linha100">
+
+                        <div class="AlinhaTexto">
+                            <div class="TituloEmpresa">
+                                Portfólio
+                            </div>
+
+                            <div class="DescricaoEmpresa">    
+                                <p> 
+                                    Atualmente, estou empregado como desenvolvedor em uma empresa de tecnologia, onde tenho a oportunidade de aplicar e aprimorar minhas habilidades em diversas áreas da programação e desenvolvimento de software. Dentro dessa posição, presto uma variedade de serviços que contribuem para a construção de sistemas robustos e eficientes.
+                                    
+                                    No meu dia-a-dia, sou responsável pelo desenvolvimento e otimização de sistemas tanto no lado do back-end quanto no front-end.
+                                </p>
+                                <p>
+                                    Aqui está alguns dos projetos dos quais eu já realizei na ocupação atual:
+                                </p>
+
+                                <h2 style="text-decoration: underline;"><a href="https://www.saomanoel.com.br/" target="_blank">Usina São Manoel</a></h2>
+                                <ul>
+                                  <li>Site Institucional</li>                                  
+                                </ul>
+                              
+                                <h2 style="text-decoration: underline;"><a href="https://www.fekababy.com.br/" target="_blank">FekaBaby</a></h2>
+                                <ul>
+                                  <li>Loja virtual de moda infantil</li>                                 
+                                </ul>
+
+                                <h2 style="text-decoration: underline;"><a href="https://www.g7juridico.com.br/" target="_blank">G7</a></h2>
+                                <ul>
+                                  <li>EAD para o seguimento juridico</li>                                  
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="AlinhaLogo">
+                            <img src="imagens/1676850232487.jpg" style="width: 360px; height: auto; border-radius: 50%;">
+                        </div>			
+                    </div>			
+                </div>
+            </div>  
+            
+            <!-- Conteudo Contato-->
+            <div class="Empresa Inline100 Centro" id="Contato" style="display: none;">
+                <div class="Centralizar">
+                    <div class="AlinhaEmpresa Linha100">                       
+                        <div class="campos" style=" width: 100%; background: #f2f4f6;  border-radius: 5px; padding: 40px;">
+                            <div class="alinhaColunas" style="display: flex;
+                            gap: 20px;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            align-content: center;
+                            justify-content: center;
+                            align-items: center;">                
+                                <div class="linha" style="display: flex; flex-direction: column; width: 50%;">
+                                    <div class="alinha_itens_campo">
+                                        <div class="textoInput" style="margin-bottom: 5px;  margin-top: 20px; text-align: left;  color: #7D7D7D; margin-left: 5px;">Nome:</div>
+                                        <input type="text" class="campo_input input" value="" name="nome" id="nome" style="height: 43px;  border-radius: 5px; background: #fff;
+                                        border: 1px solid #dbdbdb;
+                                        margin-bottom: 15px;
+                                        padding-left: 15px;
+                                        padding-right: 15px;
+                                        width: 100%;">
+                                    </div>
+            
+                                    <div class="alinha_itens_campo">
+                                        <div class="textoInput" style="margin-bottom: 5px;  margin-top: 20px; text-align: left;  color: #7D7D7D; margin-left: 5px;">E-mail:</div>
+                                        <input type="text" class="campo_input input" value="" name="email" id="email" style="height: 43px;  border-radius: 5px; background: #fff;
+                                        border: 1px solid #dbdbdb;
+                                        margin-bottom: 15px;
+                                        padding-left: 15px;
+                                        padding-right: 15px;
+                                        width: 100%;">
+                                    </div>     
+                                    
+                                    <div class="alinha_itens_campo">
+                                        <div class="textoInput" style="margin-bottom: 5px;  margin-top: 20px; text-align: left;  color: #7D7D7D; margin-left: 5px;">Mensagem:</div>
+                                        <textarea type="text" class="campo_input input" value="" name="mensagem" id="mensagem" style="height: 100px;  border-radius: 5px; background: #fff;
+                                        border: 1px solid #dbdbdb;
+                                        margin-bottom: 15px;
+                                        padding-left: 15px;
+                                        padding-right: 15px;
+                                        width: 100%;"></textarea>
+                                    </div>  
+
+                                    <div class="btnEnviar" style="width: 177px; height: 40px; border-radius: 5px; background: #208acf;
+                                    color: #FFF;
+                                    font-weight: 700;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-top: 15px;
+                                    cursor: pointer;" >Enviar</div>
+                            </div>                                                     
+                        </div>                        		
+                    </div>			
+                </div>
+            </div>
+
+        <!-- Conteudo Rodape-->
+
+        <div class="Rodape Inline100 Centro">
+            <div class="Centralizar">
+                <div class="AlinhaConteudoRodape">
+                    <div class="LogoRodape">
+                        <div class="Logo" style="background-image:url('imagens/icone_rodape.svg');"></div>
+                    </div>
+                    <div class="LogoInfo">
+                        © 2024 - Portfólio pessoal
+                    </div>
+                </div>
+            </div>	
+        </div>  
+
+        <script src="script.js"></script>     
+    </body>        
+</html>
+
+  
+        

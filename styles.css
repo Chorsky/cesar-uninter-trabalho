@@ -1,0 +1,268 @@
+/*	---------------- Principais ---------------- */
+* {box-sizing: border-box;}
+
+@font-face {	font-family: 'Arimo';	src: url('../fonts/Arimo-Bold.ttf'); font-weight: 700; font-display: swap;}
+@font-face {	font-family: 'Arimo';	src: url('../fonts/Arimo-Medium.ttf'); font-weight: 500; font-display: swap;}
+@font-face {	font-family: 'Arimo';	src: url('../fonts/Arimo-Regular.ttf'); font-weight: 400; font-display: swap;}
+@font-face {	font-family: 'Arimo';	src: url('../fonts/Arimo-SemiBold.ttf'); font-weight: 600; font-display: swap;}
+
+::before {box-sizing: unset}
+.fancybox-active {height: 100% !important;}
+
+html {height: 100% !important; width: 100%;-webkit-backface-visibility: hidden !important;}
+
+body {margin: 0;min-width: 322px;background-color: #fff; overflow-y: auto; font-family: 'Arimo'; font-weight: 300; /* color: #7f7f7f; */ height: auto; font-size: 15px; -webkit-backface-visibility: hidden; overflow-x: hidden;-webkit-backface-visibility: hidden !important;-webkit-overflow-scrolling: touch;}
+input,select,textarea {outline-style: none;font-family: 'Arimo', sans-serif;appearance: none !important;-webkit-appearance: none !important;-ms-appearance: none;border: 0;background-color: #fff;}
+h1,h2,h3 {	padding: 0;	margin: 0;	font-weight: 400}
+hr {color: #1e1e1f}
+select::-ms-expand {display: none;}
+input:-webkit-autofill {box-shadow: 0 0 0px 1000px white inset;-webkit-box-shadow: 0 0 0px 1000px white inset;	font-family: inherit;}
+a {	color: inherit;	outline: none;	text-decoration: inherit;}
+a:hover {	color: inherit;	outline: none;	text-decoration: inherit;}
+a img {	outline: none;}
+img {	border: 0;	outline: 0;}
+input,button,select,textarea {	outline: 0;}
+
+select {background-repeat: no-repeat;	background-position: calc(100% - 15px) center;	background-image: url('../imagens/seta_select.svg');background-size: 12px;}
+button {cursor: pointer;	background-color: rgba(0, 0, 0, 0);	outline-style: none !important;	outline: thin dotted !important;	outline: 0px auto -webkit-focus-ring-color !important; outline-offset: 0px !important;}
+video,button,div {outline: none;	font-family: inherit;	appearance: none;	-webkit-appearance: none;	-ms-appearance: none;	border: 0;	-webkit-tap-highlight-color: transparent;}
+button,div:focus {outline: none;	-webkit-tap-highlight-color: transparent}
+
+input[type=button],input[type=submit],input[type=reset] {-webkit-appearance: none;}
+
+.alignCenter {	position: absolute;	top: 50%;	display: table-cell;}
+.ancora_wp {width: 60px;height: 60px;border-radius: 80px;background-color: #55cd6c;box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);background-position: center center;position: fixed;background-repeat: no-repeat;background-size:28px; background-image: url('../imagens/whatsapp.svg');right: 20px;bottom:30px;transition: .3s;z-index: 999999; cursor:pointer;}
+.Negrito {	font-weight: 700}
+.ErroValidacao {	color: red;	font-size: 14px;	text-align: center;	margin: 20px 0 0 0;	opacity: 0;}
+.div-sucesso {	display: none;	float: left;	width: 100%;	text-align: center;	color: #ffffff;	margin-bottom: 20px;	display: none;	background-color: #28a745;	padding: 10px;}
+.BordaErro {	border: 1px solid #cb1c0f !important}
+.ColorErro {	color: #D93636 !important;	font-weight: 600}
+.SucessoValidacao {	color: green;	font-size: 12px;	text-align: left;	margin: 0 0 5px 0;	opacity: 0;}
+.Centralizar {	display: inline-block;	width: 100%;	z-index: 1;	position: relative;	max-width: 1240px;}
+.Esconde {	display: none}
+.Titulo {	font-size: 35px;	text-align: left;	color: #7f7f7f;	line-height: 35px;}
+textarea {	resize: none;	border-radius: 3px;	border: 1px solid #d8d8d8;	font-size: 15px;	color: #7f7f7f;	padding: 15px}
+
+/*<!-- Menu mobile -->*/
+.Menu_flutuante {float: right;position: fixed;height: 100%;z-index: 99999;right: -300px;top: 0px;transition: 0.8s;background-color: #fff;}
+.ParteMenu {float: right;overflow: auto;width: 270px;background-color: #fff;font-family: Arimo;font-weight: 600;font-size: 15px;text-align: right;color: #bd2c41;height: 100%;transition: 0.5s;}
+.ParteEscura {float: right;width: 100%;background: rgba(0, 0, 0, 0.60);height: 100%;cursor: pointer;transition: 0.8s;	position: fixed;	z-index: 10;	display: none;}
+.DivMenu {float: right;	width: 100%;	height: auto;	text-align: left;}
+
+.Menu_flutuante .Arrasta {float: left; width: 100%; padding: 15px 15px;}
+.Menu_flutuante .Arrasta input {border: 1px solid #d8d8d8; padding-left: 15px; height: 40px; border-radius: 20px; background: #fff; border-radius: 18px; background: #fff; border: 1px solid #c6c6c6;}
+.Rotaciona {	transform: rotate(90deg)}
+.BlocoSubMenu {	width: 100%;	float: left}
+.SubSubMenu {	display: none;	width: 100%;	float: left;}
+
+.setinha {	width: 50px;	height: 50px;	display: flex;	align-items: center;	justify-content: flex-end;}
+.DivMenu .AlinhaFechar {margin: 35px 0px 20px 0}
+.DivMenu .AlinhaFechar .BotaoFechar {margin-left: 23px;	width: 17.71px; height: 12.53px; float: left; background-repeat: no-repeat;	background-position: center center;	background-size: contain;	background-image: url('../imagens/seta.svg'); margin-bottom: 44.5px;}
+/*-------- Classes uteis --------*/
+
+.Linha100 {width: 100%;	float: left;}
+.Linha100.Esquerda {text-align: left;}
+.Esquerda {text-align: left;}
+.Direita {text-align: right;}
+.Inline100 {width: 100%; display: inline-block;}
+.Centro {text-align: center !important;}
+
+.Botao1 {cursor: pointer;border-radius: 3px;background: #292929;color: #fff;transition: .2s}
+.Botao1:hover {	background-color: #CB1C0F;}
+.Botao2 {cursor: pointer;border-radius: 3px;background: #cb1c0f;color: #fff;transition: .2s}
+.Botao2:hover {background-color: transparent;border: 1px solid #fff;}
+.Botao3 {cursor: pointer;border-radius: 3px;border: 1px solid #292929;color: #292929;transition: .2s}
+.Botao3:hover {background-color: #292929;color: #fff}
+.Input {float: left;padding: 0 15px;height: 50px;border-radius: 3px;background: #fff;border: 1px solid #d8d8d8;}
+.Aberto {	display: inline !important}
+.Fechado {	display: none !important}
+
+/*-------- Classes uteis --------*/
+
+/*-------- Topo --------*/
+#Topo {height: 90px; background: #fff; filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.16)); padding: 17px 0px; z-index: 6; position: sticky; top: 0px;}
+
+#Topo .Centralizar {height: 100%}
+#Topo .AlinhaCentro {align-items: center;display: flex; justify-content: space-between;}
+#Topo .AlinhaCentro .LogoTopo img{float: left; height: 55px;}
+#Topo .Menu {text-align: right;width: 100%;}
+#Topo .MenuCima {display: flex; align-items: center; justify-content: flex-end; width: 100%;}
+#Topo .MenuCima img {margin-top: 10px; margin-left: 10px; float: right}
+
+#Topo .Arrasta {height: 100%;float: right;transition: .5s}
+#Topo .Arrasta input {border: 1px solid #d8d8d8; padding-left: 15px; width: 350px; height: 40px;border-radius: 20px; background: transparent; border: 1px solid #c6c6c6;}
+#Topo .MenuBaixo {display: flex; float: left; width: calc(100% - 5px); justify-content: center; flex-direction: row; flex-wrap: nowrap; align-items: center; margin-left: 70px;}
+#Topo .MenuBaixo .Item {cursor: pointer; position: relative; font-family: Arimo; font-weight: normal; font-size: 15px; line-height: 23px; text-align: left; color: #5e5e5e; margin-left: 30px; width: calc(100% - 20px); transition: 0.2;} 
+#Topo .MenuBaixo .Item:hover {color: #265382; transition: 0.2;}
+
+#Topo .MenuBaixo img {cursor: pointer; margin-left: 10px; float: right}
+
+#TopoMobile {background-color: #fff; display: none; z-index: 6; position: sticky; top: 0px;}
+#TopoMobile .FaixaTop {width: 100%; height: 10px; background-color: #9c1d2a;}
+#TopoMobile .MenuBaixo {width: 100%; float: left; display: flex; align-items: center; justify-content: space-between;}
+#TopoMobile .MenuBaixo .Carrinho {cursor: pointer;position: relative;display: flex;align-items: center;flex-direction: row-reverse;}
+#TopoMobile .MenuBaixo .Carrinho img {margin-left: 20px;float: right}
+#TopoMobile .MenuBaixo .bolinha {font-size: 11px;color: #fff;text-align: center;padding-left: 1px;top: -3px;right: 48px;width: 14px;height: 14px;background-color: #CB1C0F;border-radius: 100%;z-index: 4;position: absolute}
+
+.ItemMobile {justify-content: space-between; padding: 0px 0px 0px 25px; display: flex; align-items: center; float: left; width: 100%; cursor: pointer; margin-bottom: 30px; font-family: Arimo; font-weight: normal; font-size: 15px; line-height: 23px; text-align: left; color: #5e5e5e;}
+
+/*-------- Topo --------*/
+
+/*-------- Home --------*/
+
+#Home .Empresa {position: relative; z-index: 2; margin-bottom: 70px;}
+#Home .Empresa .AlinhaEmpresa{display: flex; margin-top: 50px; margin-bottom: 50px;}
+#Home .Empresa .AlinhaTexto {float: left; width: 40%;}
+#Home .Empresa .AlinhaTexto .TituloEmpresa {width: 100%; float: left; display: flex; text-align: left; font-family: Arimo; font-weight: bold; font-size: 30px; color: #2d2d2d; margin-bottom: 30px;}
+#Home .Empresa .AlinhaTexto .DescricaoEmpresa {font-family: Arimo; font-weight: normal; font-size: 15px; line-height: 23px; text-align: left; color: #5e5e5e;}
+#Home .Empresa .AlinhaLogo {float: left;width: 60%;background-position: center center;background-repeat: no-repeat;}
+
+
+/*-------- Rodape --------*/
+
+.Rodape {position: relative; z-index: 2; height: 78px; border-top: 1px solid #d5e1ec; padding: 12px; background: #f2f4f6;}
+.Rodape .AlinhaConteudoRodape {float: left; width: 100%; display: flex; flex-direction: row; flex-wrap: nowrap;}
+.Rodape .AlinhaConteudoRodape .LogoRodape{float: left; width: 10.50%;}
+.Rodape .AlinhaConteudoRodape .LogoRodape .Logo{float: left; width: 100%; background-size: cover; background-repeat: no-repeat; background-position: center center; height: 55px}
+
+.Rodape .AlinhaConteudoRodape .LogoInfo {float: left; width: 80.50%; font-family: Arimo; font-weight: normal; font-size: 15px; text-align: left; color: #5e5e5e; display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: center; align-items: center;}
+/*-------- Rodape --------*/
+
+/*-------- Responsivo --------*/
+@media screen and (max-width:1270px) {	
+	#TopoMobile {display: block;}		
+	#Topo {display: none}
+
+	.Centralizar {padding: 0px 20px;}	
+}
+
+@media screen and (max-width:1240px) {
+	
+}
+
+@media screen and (max-width:1190px) {
+
+}
+
+@media screen and (max-width:1115px) {
+	
+}
+
+@media screen and (max-width:1000px) {	
+	#CarrosselBannerMobile {display: block;}
+	#CarrosselBanner {display: none;}
+
+	#Home .BannerTopo {margin-bottom: 60px;}
+	#Home .BannerTopo .BannerCorrosselMobile .FiltroBannerMobile .alinhaInfoBannerMobile .SubTituloBannerMobile {font-size: 18px;}
+
+	#Home .Empresa {margin-bottom: 50px;}
+	#Home .Empresa .AlinhaTexto .TituloEmpresa {font-size: 25px; margin-bottom: 20px;}
+	#Home .Empresa .AlinhaEmpresa {flex-wrap: wrap;}
+	#Home .Empresa .AlinhaTexto {width: 100%; margin-bottom: 30px;}
+	#Home .Empresa .AlinhaLogo {width: 100%; height: 85.62px; background-size: contain; display: none;}
+
+	#Home .Certificacoes .AlinhaCertificacoes {flex-wrap: wrap; flex-direction: row; width: calc(100% + 10px); margin-left: -10px;}
+	#Home .Certificacoes .AlinhaCertificacoes .BlocoCertificacoes {width: calc(50% - 10px);  height: 110px; margin-left: 10px; margin-bottom: 10px; background-size: contain;}
+
+	#ProdutosMobile {display: block;}
+	#ProdutosDesktop {display: none;}
+
+	#Home .Produtos {margin-bottom: 93px;}
+	#Home .Produtos .TituloSecao {font-size: 25px; margin-bottom: 16px;}
+	#Home .Produtos .AlinhaProdutos {flex-direction: row; flex-wrap: wrap;}
+	#Home .Produtos .AlinhaProdutos .BlocoProdutos {width: calc(100% - 35px); filter: grayscale(0); background-size: cover;}
+	#Home .Produtos .AlinhaProdutos .BlocoProdutos .FiltroProdutos {background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0,0,0, 0.64) 100%);}
+	#Home .Produtos .AlinhaProdutos .BlocoProdutos .FiltroProdutos .NomeProduto {padding: 15px; font-size: 18px;}
+	#Home .Produtos .AlinhaProdutos .BlocoProdutos .FiltroProdutos .DescricaoProduto {display: block; font-size: 15px; padding: 0px 15px 0px 15px; margin-bottom: 20px;}
+
+	#Home .BannerMeio {margin-bottom: 80px;}
+	#CarrosselBannerMeioMobile {display: block;}
+	#CarrosselBannerMeio {display: none;}
+	#Home .BannerMeio .BannerMeioMobile .FiltroBannerMeioMobile .TituloBannerMeioMobile {font-size: 25px;}
+	#Home .BannerMeio .BannerMeioMobile .FiltroBannerMeioMobile .SubTituloBannerMeioMobile {font-size: 15px;}
+
+	#ResponsabilidadeDesktop {display: none;}
+	#ResponsabilidadeMobile {display: block;}
+
+	#Home .Responsabilidade {margin-bottom: 113px;}
+	#Home .Responsabilidade .TituloSecao {margin-bottom: 20px;}
+	#Home .Responsabilidade .AlinhaResponsabilidade .BlocoResponsabilidade {width: calc(100% - 30px); height: 480px;}
+	#Home .Responsabilidade .AlinhaResponsabilidade .BlocoResponsabilidade .FiltroResponsabilidade .TituloResponsabilidade {margin-bottom: 30px;}
+
+	#Home .MeioAmbiente {margin-bottom: 30px;}
+	#Home .MeioAmbiente .AlinhaMeioAmbiente {flex-wrap: wrap;}	
+	#Home .MeioAmbiente .AlinhaMeioAmbiente .BlocoMeioAmbiente {width: calc(100% - 30px); margin-bottom: 15px; background-size: cover; height: auto;} 
+	#Home .MeioAmbiente .AlinhaMeioAmbiente .BlocoMeioAmbiente .FiltroMeioAmbiente1 {padding: 26px 15px 20px 15px;}
+	#Home .MeioAmbiente .AlinhaMeioAmbiente .BlocoMeioAmbiente .FiltroMeioAmbiente2 {padding: 150px 15px 20px 15px;}
+	#Home .MeioAmbiente .AlinhaMeioAmbiente .BlocoMeioAmbiente .FiltroMeioAmbiente2 .IconeBlocoMeioAmbiente2 {background-position: left;}
+	#Home .MeioAmbiente .AlinhaMeioAmbiente .BlocoMeioAmbiente .FiltroMeioAmbiente2 .TituloBlocoMeioAmbiente2 {float: left; text-align: left;}
+	#Home .MeioAmbiente .AlinhaMeioAmbiente .BlocoMeioAmbiente .FiltroMeioAmbiente2 .DescricaoBlocoMeioAmbiente2 {float: left; text-align: left;}
+
+	#AplicacoesDesktop {display: none;}
+	#AplicacoesMobile {display: block;}
+
+	/* #Home .Aplicacoes {margin-bottom: 60px;} */
+	#Home .Aplicacoes .TituloSecao {margin-bottom: 20px; margin-top: 60px;}
+	#Home .CarrosselAplicacoes .FiltroAplicacoes .BlocoAplicacoes {flex-wrap: wrap;}
+	#Home .CarrosselAplicacoes .FiltroAplicacoes .BlocoAplicacoes .BlocoAplicacoesSetores {width:calc(100% - 15px); margin-left: 15px;}
+	#Home .CarrosselAplicacoes .FiltroAplicacoes .BlocoAplicacoes .BlocoAplicacoesSetores .BlocoAplicacoesSetoresTitulo {font-size: 15px;}
+
+	#Home .CarrosselAplicacoes .FiltroAplicacoes .BlocoAplicacoes .BlocoAplicacoesProdutos {width:calc(100% - 15px); margin-left: 15px;}
+	#Home .CarrosselAplicacoes .FiltroAplicacoes .BlocoAplicacoes .BlocoAplicacoesProdutos .BlocoAplicacoesProdutosTitulo {font-size: 15px;}
+
+	#Home .FaleConosco {margin-bottom: 0px; padding: 60px 0px 0px 0px;}
+	#Home .FaleConosco .AlinhaFaleConosco {flex-wrap: wrap;}
+	#Home .FaleConosco .AlinhaTexto {width: calc(100% - 15px); margin-left: 15px; margin-right: 0px;}
+	#Home .FaleConosco .AlinhaTexto .TituloFaleConosco {font-size: 25px; margin-bottom: 20px;}
+	#Home .FaleConosco .AlinhaTexto .EmailFaleConosco {height: 69px; margin-bottom: 30px;}
+	#Home .FaleConosco .AlinhaMapa {width: calc(100% - 15px); margin-left: 15px;}
+	#Home .FaleConosco .AlinhaMapa .TituloFaleConosco {font-size: 25px; margin-bottom: 10px;}
+
+	.Rodape .AlinhaConteudoRodape .LogoRodape {width: 28.44%;}
+	.Rodape .AlinhaConteudoRodape .LogoInfo {width: 71.56%; font-size: 15px;}
+	.Rodape .AlinhaConteudoRodape .LogoRodape .Logo {background-size: contain;}
+}
+
+@media screen and (max-width:950px) {
+	
+}
+
+@media screen and (max-width:900px) {
+	
+}
+
+
+@media screen and (max-width:800px) {	
+	
+}
+
+@media screen and (max-width:770px) {
+
+}
+
+@media screen and (max-width:660px) {	
+
+}
+
+@media screen and (max-width:600px) {
+
+}
+
+@media screen and (max-width:500px) {
+	
+}
+
+@media screen and (max-width:490px) {
+	
+}
+
+@media screen and (max-width:440px) {
+	
+}
+
+@media screen and (max-width:380px) {
+
+
+}
+
+/*-------- Responsivo --------*/
